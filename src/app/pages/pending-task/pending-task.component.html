@@ -1,0 +1,20 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of pendingTasks">
+        <td>{{ task.name }}</td>
+        <td>{{ task.description }}</td>
+        <td>
+          <button class="btn btn-outline-success" (click)="moveToCompleted(task.id)">Move</button>
+          <button (click)="deleteTask(task.id)" class="btn btn-outline-danger">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
